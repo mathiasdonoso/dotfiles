@@ -37,15 +37,26 @@ man() {
     man "$@"
 }
 
+# disable ctrl+s
+stty -ixon
+
+# where do I put my aliases?
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias f='cd $(find "$HOME/code" -mindepth 2 -maxdepth 2 -type d | fzf)'
 alias t='tmux attach -t "$(tmux ls | fzf | awk -F '"'"':'"'"' '"'"'{print $1}'"'"')"'
+alias s='tmux new-session -s "$(basename $PWD)"'
 alias vim='nvim'
 alias :q='exit'
 alias resetkb='setxkbmap -layout us,latam -option grp:alt_shift_toggle'
 alias lg='lazygit'
 alias ld='lazydocker'
+
+# some very important keybindings
+bind '"\C-f": "f\nclear\n"'
+bind '"\C-t": "t\nclear\n"'
+bind '"\C-s": "s\nclear\n"'
+bind '"\C-b": "bg\nclear\n"'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/ \(.*\)/(\1)/'

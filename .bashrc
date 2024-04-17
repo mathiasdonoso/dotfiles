@@ -56,7 +56,6 @@ alias ld='lazydocker'
 bind '"\C-f": "f\nclear\n"'
 bind '"\C-t": "t\nclear\n"'
 bind '"\C-s": "s\nclear\n"'
-bind '"\C-b": "bg\nclear\n"'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/ \(.*\)/(\1)/'
@@ -81,6 +80,5 @@ export GOPATH=$HOME/go
 
 PATH=$PATH:$HOME/go/bin
 # PATH=$PATH:$HOME/.cargo/bin
-
 
 . "$HOME/.cargo/env"

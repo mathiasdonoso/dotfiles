@@ -78,6 +78,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export GOPATH=$HOME/go
 
+PATH=$PATH:/usr/local/nvim/bin
+
 PATH=$PATH:$HOME/go/bin
 # PATH=$PATH:$HOME/.cargo/bin
 

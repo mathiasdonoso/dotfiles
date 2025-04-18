@@ -19,7 +19,7 @@ sudo apt install stow
 First, checkout the dotfiles repo in your $HOME directory using git
 
 ```
-git clone git@github.com/mathiasdonoso/dotfiles.git
+git clone --recurse-submodules git@github.com/mathiasdonoso/dotfiles.git
 cd dotfiles
 ```
 
@@ -29,4 +29,4 @@ Then use GNU stow to create symlinks
 stow .
 ```
 
-Use --adapt flag if there are existing files
+Use --adopt flag if there are existing files

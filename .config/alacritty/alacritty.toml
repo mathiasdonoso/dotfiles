@@ -1,0 +1,21 @@
+shell = "/bin/bash"
+
+import = [
+    "~/.config/alacritty/themes/themes/github_dark_high_contrast.toml"
+]
+
+[font]
+size = 11
+
+[font.offset]
+y = 1
+x = 1
+
+[font.normal]
+# family = "Sauce Code Pro Nerd Font Mono"
+family = "Iosevka Term Medium Extended"
+
+[window]
+startup_mode = "Maximized"
+opacity = 0.92
+

@@ -1,0 +1,11 @@
+[user]
+	email = mathiasd88@gmail.com
+	name = Mathias
+[rerere]
+	enabled = true
+[init]
+	defaultBranch = main
+[push]
+	default = current
+[core]
+	editor = nvim

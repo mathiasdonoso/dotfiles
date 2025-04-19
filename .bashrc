@@ -169,10 +169,11 @@ export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.zig:$PATH"
 
-export PHP_INI_SCAN_DIR="/home/mathias/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
+if command -v pyenv >/dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init - bash)"
+fi
 
 [[ -s "/home/mathias/.gvm/scripts/gvm" ]] && source "/home/mathias/.gvm/scripts/gvm"
 

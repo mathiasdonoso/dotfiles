@@ -6,7 +6,8 @@ y = 1
 x = 1
 
 [font.normal]
-family = "Iosevka Term Medium Extended"
+# family = "Iosevka Fixed Medium"
+family = "Monoid"
 
 [window]
 startup_mode = "Maximized"

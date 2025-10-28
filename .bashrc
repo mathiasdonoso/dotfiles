@@ -94,7 +94,7 @@ alias l='ls -CF'
 stty -ixon
 
 # where do I put my aliases?
-alias f='cd $(find "$HOME/code" -mindepth 2 -maxdepth 2 -type d | fzf)'
+alias f='cd $(fd . $HOME/code --type d --min-depth 2 --max-depth 2 | fzf)'
 alias t='tmux attach -t "$(tmux ls | fzf | awk -F '"'"':'"'"' '"'"'{print $1}'"'"')"'
 alias s='tmux new-session -s "$(basename $PWD)"'
 alias kill-tmux-sessions='tmux list-sessions -F "#{session_name}" | xargs -I {} tmux kill-session -t {}'

@@ -103,7 +103,6 @@ alias :q='exit'
 alias ..='cd ..'
 alias resetkb='setxkbmap -layout us,latam -option grp:alt_shift_toggle'
 alias lg='lazygit'
-alias ld='lazydocker'
 alias resetx='xrandr --output DP-1 --brightness 0.75 --mode 2560x1440 --left-of eDP-1'
 
 # some very important keybindings

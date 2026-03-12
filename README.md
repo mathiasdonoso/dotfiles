@@ -2,31 +2,12 @@
 
 ## Requirements
 
-Ensure you have the following installed on your system
-
-### Git
-```
-sudo apt install git
-```
-
 ### Stow
 ```
 sudo apt install stow
 ```
 
-## Instalation
-
-First, checkout the dotfiles repo in your $HOME directory using git
-
+## Usage
 ```
-git clone --recurse-submodules git@github.com/mathiasdonoso/dotfiles.git
-cd dotfiles
+stow --target="$HOME" .
 ```
-
-Then use GNU stow to create symlinks
-
-```
-stow .
-```
-
-Use --adopt flag if there are existing files

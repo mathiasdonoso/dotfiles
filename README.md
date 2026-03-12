@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal setup for Debian-based systems, managed with [GNU Stow](https://www.gnu.org/software/stow/).
+My personal setup for (mostly) Debian-based systems, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Install
 

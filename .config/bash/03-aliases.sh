@@ -10,18 +10,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Navigation — requires fzf + fd
-if command -v fzf &>/dev/null && command -v fd &>/dev/null; then
-    alias f='cd "$(fd . "$HOME/code" --type d --min-depth 2 --max-depth 2 | fzf)"'
-fi
-
-# Tmux — requires fzf
-if command -v fzf &>/dev/null; then
-    alias t='tmux attach -t "$(tmux ls | fzf | awk -F: '"'"'{print $1}'"'"')"'
-fi
-alias s='tmux new-session -s "$(basename "$PWD")"'
-alias kill-tmux-sessions='tmux list-sessions -F "#{session_name}" | xargs -I {} tmux kill-session -t {}'
-
 # Git
 command -v lazygit &>/dev/null && alias lg='lazygit'
 

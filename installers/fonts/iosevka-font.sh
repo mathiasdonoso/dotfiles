@@ -7,7 +7,7 @@ FONTS_DIR="$HOME/.local/share/fonts"
 install_if_missing() {
   fc-list | grep -qi "$FONT_NAME" && return 0
 
-  echo "  → installing $FONT_NAME Nerd Font ${VERSION}..."
+  echo "  → installing $FONT_NAME Font ${VERSION}..."
   local url="https://github.com/be5invis/Iosevka/releases/download/v${VERSION}/${FONT_NAME}.tar.xz"
   mkdir -p "$FONTS_DIR/$FONT_NAME"
   curl -sL "$url" | tar -xJ -C "$FONTS_DIR/$FONT_NAME"

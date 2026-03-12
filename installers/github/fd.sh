@@ -1,7 +1,7 @@
 # fd — fast find replacement (used by fzf aliases + vim)
 # Update VERSION to the latest release from: https://github.com/sharkdp/fd/releases
 BINARY="fd"
-VERSION="10.2.0"
+VERSION="10.4.2"
 ASSET="fd-v${VERSION}-x86_64-unknown-linux-musl"
 
 install_if_missing() {

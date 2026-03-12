@@ -8,7 +8,6 @@ wget
 feh
 i3
 i3status
-alacritty
 bash-completion
 xclip
 libnotify-bin

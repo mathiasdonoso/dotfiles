@@ -1,7 +1,7 @@
 # ripgrep — fast grep replacement (used by vim + aliases)
 # Update VERSION to the latest release from: https://github.com/BurntSushi/ripgrep/releases
 BINARY="rg"
-VERSION="14.1.1"
+VERSION="15.1.0"
 ASSET="ripgrep-${VERSION}-x86_64-unknown-linux-musl"
 
 install_if_missing() {

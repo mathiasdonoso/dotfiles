@@ -79,7 +79,15 @@ for script in "$DOTFILES_DIR/installers/runtimes/"*.sh; do
   install_if_missing
 done
 
-# ── Step 4: Fonts ─────────────────────────────────────────────────────────────
+# ── Step 4: Tools ─────────────────────────────────────────────────────────────
+log "Installing tools..."
+for script in "$DOTFILES_DIR/installers/tools/"*.sh; do
+  # shellcheck source=/dev/null
+  source "$script"
+  install_if_missing
+done
+
+# ── Step 5: Fonts ─────────────────────────────────────────────────────────────
 log "Installing fonts..."
 mkdir -p "$HOME/.local/share/fonts"
 for script in "$DOTFILES_DIR/installers/fonts/"*.sh; do
@@ -88,7 +96,7 @@ for script in "$DOTFILES_DIR/installers/fonts/"*.sh; do
   install_if_missing
 done
 
-# ── Step 5: Wallpapers ────────────────────────────────────────────────────────
+# ── Step 6: Wallpapers ────────────────────────────────────────────────────────
 if [ -n "${WALLPAPERS_REPO:-}" ]; then
   if [ -d "$WALLPAPERS_DIR" ]; then
     log "Wallpapers already present at $WALLPAPERS_DIR, pulling latest..."

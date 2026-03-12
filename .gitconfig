@@ -3,6 +3,7 @@
 	name = Mathias
 [core]
 	editor = vim
+	pager = delta
 [init]
 	defaultBranch = main
 [push]
@@ -19,10 +20,20 @@
 	algorithm = histogram
 [color]
 	ui = auto
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
 [alias]
 	lg = log --oneline --graph --decorate --all
 	st = status -sb
 	co = checkout
 	br = branch -vv
+	sw = switch
 	undo = reset HEAD~1 --mixed
+	pf = push --force-with-lease
+	wip = commit -am "wip"
+	root = rev-parse --show-toplevel
 	aliases = config --get-regexp alias

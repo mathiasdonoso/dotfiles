@@ -1,32 +1,11 @@
-# My dotfiles
+# dotfiles
 
-## Requirements
+My personal setup for (mostly) Debian-based systems, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-Ensure you have the following installed on your system
+## Install
 
-### Git
+```sh
+git clone --recurse-submodules git@github.com:mathiasdonoso/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+bash install.sh
 ```
-sudo apt install git
-```
-
-### Stow
-```
-sudo apt install stow
-```
-
-## Instalation
-
-First, checkout the dotfiles repo in your $HOME directory using git
-
-```
-git clone --recurse-submodules git@github.com/mathiasdonoso/dotfiles.git
-cd dotfiles
-```
-
-Then use GNU stow to create symlinks
-
-```
-stow .
-```
-
-Use --adopt flag if there are existing files

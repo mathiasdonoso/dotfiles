@@ -1,5 +1,11 @@
 ^install\.sh$
 ^installers$
-^README\.md$
-^\.git$
+
 ^\.claude$
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README\.*
+^/LICENSE\.*

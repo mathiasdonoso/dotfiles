@@ -31,31 +31,31 @@ syntax on
 filetype plugin indent on
 
 if has('clipboard')
-  set clipboard=unnamedplus
+    set clipboard=unnamedplus
 endif
 
 if executable('go')
-  let $GOPATH = $HOME . "/go"
-  let $PATH = $HOME . "/go/bin:" . $PATH
+    let $GOPATH = $HOME . "/go"
+    let $PATH = $HOME . "/go/bin:" . $PATH
 endif
 
 if executable('rg')
-  set grepprg=rg\ --vimgrep
-  set grepformat=%f:%l:%c:%m
-  nnoremap gr :execute "grep! -R " . expand("<cword>") . " ."<CR>:copen<CR>
+    set grepprg=rg\ --vimgrep
+    set grepformat=%f:%l:%c:%m
+    nnoremap gr :execute "grep! -R " . expand("<cword>") . " ."<CR>:copen<CR>
 endif
 
 if executable('fzf')
-  if executable('fd')
-    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow'
-  endif
+    if executable('fd')
+        let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow'
+    endif
 
-  nnoremap <leader>ff :Files<CR>
-  nnoremap <leader><leader> :Buffers<CR>
+    nnoremap <leader>ff :Files<CR>
+    nnoremap <leader><leader> :Buffers<CR>
 
-  if executable('rg')
-    nnoremap <leader>fw :Rg<CR>
-  endif
+    if executable('rg')
+        nnoremap <leader>fw :Rg<CR>
+    endif
 endif
 
 nnoremap <leader>h :nohlsearch<CR>

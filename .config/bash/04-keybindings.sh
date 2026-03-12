@@ -16,3 +16,14 @@ bind '"\C-t": "t\nclear\n"'
 bind '"\C-s": "s\nclear\n"'
 bind '"\C-k": "kill_tmux_sessions\nclear\n"'
 
+if command -v fzf >/dev/null; then
+  __fzf_history__() {
+    local selected
+    selected=$(history | tac | sed 's/^ *[0-9]* *//' | fzf --height 40% --reverse --border)
+    if [ -n "$selected" ]; then
+      READLINE_LINE="$selected"
+      READLINE_POINT=${#READLINE_LINE}
+    fi
+  }
+  bind -x '"\C-r": __fzf_history__'
+fi

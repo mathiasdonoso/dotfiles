@@ -3,6 +3,11 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# ── Configuration ─────────────────────────────────────────────────────────────
+# Set to your wallpapers repo URL (leave empty to skip)
+WALLPAPERS_REPO="https://github.com/mathiasdonoso/anime.git"
+WALLPAPERS_DIR="$HOME/Pictures/anime"
+
 # ── Colors ────────────────────────────────────────────────────────────────────
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -74,12 +79,35 @@ for script in "$DOTFILES_DIR/installers/runtimes/"*.sh; do
   install_if_missing
 done
 
-# ── Step 4: Git submodules ────────────────────────────────────────────────────
+# ── Step 4: Fonts ─────────────────────────────────────────────────────────────
+log "Installing fonts..."
+mkdir -p "$HOME/.local/share/fonts"
+for script in "$DOTFILES_DIR/installers/fonts/"*.sh; do
+  # shellcheck source=/dev/null
+  source "$script"
+  install_if_missing
+done
+
+# ── Step 5: Wallpapers ────────────────────────────────────────────────────────
+if [ -n "${WALLPAPERS_REPO:-}" ]; then
+  if [ -d "$WALLPAPERS_DIR" ]; then
+    log "Wallpapers already present at $WALLPAPERS_DIR, pulling latest..."
+    git -C "$WALLPAPERS_DIR" pull --ff-only || warn "Could not update wallpapers repo."
+  else
+    log "Cloning wallpapers to $WALLPAPERS_DIR..."
+    mkdir -p "$(dirname "$WALLPAPERS_DIR")"
+    git clone "$WALLPAPERS_REPO" "$WALLPAPERS_DIR"
+  fi
+else
+  warn "WALLPAPERS_REPO not set — skipping wallpapers clone."
+fi
+
+# ── Step 6: Git submodules ────────────────────────────────────────────────────
 log "Initializing git submodules..."
 cd "$DOTFILES_DIR"
 git submodule update --init --recursive
 
-# ── Step 5: Stow ─────────────────────────────────────────────────────────────
+# ── Step 7: Stow ─────────────────────────────────────────────────────────────
 log "Symlinking dotfiles with stow..."
 stow --target="$HOME" --dir="$DOTFILES_DIR" . --adopt 2>/dev/null || \
   stow --target="$HOME" --dir="$DOTFILES_DIR" .

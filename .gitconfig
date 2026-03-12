@@ -1,11 +1,28 @@
 [user]
 	email = mathiasd88@gmail.com
 	name = Mathias
-[rerere]
-	enabled = true
+[core]
+	editor = vim
 [init]
 	defaultBranch = main
 [push]
 	default = current
-[core]
-	editor = nvim
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	algorithm = histogram
+[color]
+	ui = auto
+[alias]
+	lg = log --oneline --graph --decorate --all
+	st = status -sb
+	co = checkout
+	br = branch -vv
+	undo = reset HEAD~1 --mixed
+	aliases = config --get-regexp alias

@@ -1,0 +1,12 @@
+^install\.sh$
+^installers$
+
+^\.claude$
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README\.*
+^/LICENSE\.*
+

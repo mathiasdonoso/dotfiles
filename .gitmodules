@@ -1,27 +1,27 @@
-[submodule ".config/alacritty/themes"]
-	path = .config/alacritty/themes
-	url = https://github.com/alacritty/alacritty-theme
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = https://github.com/mathiasdonoso/nvim-config
-[submodule ".vim/pack/plugins/start/fzf"]
-	path = .vim/pack/plugins/start/fzf
+[submodule "vim/.vim/pack/themes/start/ayu-vim"]
+	path = vim/.vim/pack/themes/start/ayu-vim
+	url = https://github.com/ayu-theme/ayu-vim.git
+[submodule "vim/.vim/pack/plugins/start/fzf"]
+	path = vim/.vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf
-[submodule ".vim/pack/plugins/start/vim-commentary"]
-	path = .vim/pack/plugins/start/vim-commentary
+[submodule "vim/.vim/pack/plugins/start/vim-commentary"]
+	path = vim/.vim/pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule ".vim/pack/plugins/start/vim-fugitive"]
-	path = .vim/pack/plugins/start/vim-fugitive
+[submodule "vim/.vim/pack/plugins/start/vim-fugitive"]
+	path = vim/.vim/pack/plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/pack/plugins/start/vim-go"]
-	path = .vim/pack/plugins/start/vim-go
+[submodule "vim/.vim/pack/plugins/start/vim-go"]
+	path = vim/.vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go
-[submodule ".vim/pack/plugins/start/vim-surround"]
-	path = .vim/pack/plugins/start/vim-surround
+[submodule "vim/.vim/pack/plugins/start/vim-surround"]
+	path = vim/.vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule ".vim/pack/plugins/start/fzf.vim"]
-	path = .vim/pack/plugins/start/fzf.vim
+[submodule "vim/.vim/pack/plugins/start/fzf.vim"]
+	path = vim/.vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
-[submodule ".tmux/.tmux/plugins/tpm"]
-	path = .tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+[submodule "alacritty/.config/alacritty/themes"]
+	path = alacritty/.config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/mathiasdonoso/nvim-config

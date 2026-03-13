@@ -9,5 +9,5 @@ sudo apt install stow
 
 ## Usage
 ```
-stow --target="$HOME" .
+stow --target="$HOME" */
 ```

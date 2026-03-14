@@ -42,7 +42,6 @@ endif
 if executable('rg')
     set grepprg=rg\ --vimgrep
     set grepformat=%f:%l:%c:%m
-    " nnoremap gr :execute "grep! -R " . expand("<cword>") . " ."<CR>:copen<CR>
     nnoremap gr :execute "grep! " . expand("<cword>") . " ."<CR>:copen<CR>
 endif
 

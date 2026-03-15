@@ -1,39 +1,39 @@
 [user]
-	email = mathiasd88@gmail.com
-	name = Mathias
+    email = mathiasd88@gmail.com
+    name = Mathias
 [core]
-	editor = vim
-	pager = delta
+    editor = vim
+    pager = delta
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [push]
-	default = current
+    default = current
 [pull]
-	rebase = true
+    rebase = true
 [fetch]
-	prune = true
+    prune = true
 [rerere]
-	enabled = true
+    enabled = true
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [diff]
-	algorithm = histogram
+    algorithm = histogram
 [color]
-	ui = auto
+    ui = auto
 [interactive]
-	diffFilter = delta --color-only
+    diffFilter = delta --color-only
 [delta]
-	navigate = true
-	side-by-side = true
-	line-numbers = true
+    navigate = true
+    side-by-side = true
+    line-numbers = true
 [alias]
-	lg = log --oneline --graph --decorate --all
-	st = status -sb
-	co = checkout
-	br = branch -vv
-	sw = switch
-	undo = reset HEAD~1 --mixed
-	pf = push --force-with-lease
-	wip = commit -am "wip"
-	root = rev-parse --show-toplevel
-	aliases = config --get-regexp alias
+    lg = log --oneline --graph --decorate --all
+    st = status -sb
+    co = checkout
+    br = branch -vv
+    sw = switch
+    undo = reset HEAD~1 --mixed
+    pf = push --force-with-lease
+    wip = commit -am "wip"
+    root = rev-parse --show-toplevel
+    aliases = config --get-regexp alias

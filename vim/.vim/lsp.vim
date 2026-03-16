@@ -52,8 +52,6 @@ inoremap <silent> <C-Space> <C-x><C-o>
 autocmd FileType php setlocal omnifunc=lsp#complete
 
 autocmd User LspSetup call LspOptionsSet(#{
-            \   diagSignErrorText: '✘',
-            \   diagSignWarningText: '▲',
-            \   diagSignInfoText: '»',
-            \   diagSignHintText: '⚑',
+            \   popupBorder: v:true,
+            \   popupBorderChars: ['═', '║', '═', '║', '╔', '╗', '╝', '╚'],
             \ })

@@ -1,7 +1,6 @@
 let mapleader=" "
 
 nnoremap <leader>h :nohlsearch<CR>
-nnoremap gd <C-]>
 
 nnoremap - :Ex<CR>
 
@@ -20,9 +19,3 @@ nnoremap <C-j> :lnext<CR>
 nnoremap <C-k> :lprev<CR>
 
 nnoremap Q <nop>
-
-if executable('rg')
-    set grepprg=rg\ --vimgrep
-    set grepformat=%f:%l:%c:%m
-    nnoremap gr :execute "grep! " . expand("<cword>") . " ."<CR>:copen<CR>
-endif

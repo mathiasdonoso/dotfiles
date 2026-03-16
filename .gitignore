@@ -1,37 +1,26 @@
-# OS
 .DS_Store
 Thumbs.db
 
-# Git
 *.orig
 
-# Bash
 .bash_history
 .bash_sessions/
 
-# TMux - ignore TPM plugins except TPM itself
 .tmux/.tmux/plugins/*/
 !.tmux/.tmux/plugins/tpm
 
-# Vim - submodules are managed, ignore everything else
-.vim/pack/plugins/start/*/
-!.vim/pack/plugins/start/fzf
-!.vim/pack/plugins/start/fzf.vim
-!.vim/pack/plugins/start/vim-commentary
-!.vim/pack/plugins/start/vim-fugitive
-!.vim/pack/plugins/start/vim-go
-!.vim/pack/plugins/start/vim-surround
 .vim/spell/
 .vim/undo/
 .vim/backup/
 .vim/swap/
 .vim/view/
+.vim/plugged/
+.vim/autoload/
+.vim/undodir/
 
-# Config
 .config/nvim/
 !.config/nvim/.git
 
 **/.netrwhist
 
-# Claude
 .claude/

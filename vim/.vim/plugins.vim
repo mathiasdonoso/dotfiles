@@ -14,6 +14,10 @@ function! s:ensure(repo)
   execute 'set runtimepath+=' . fnameescape(path)
 endfunction
 
+call s:ensure('tpope/vim-sensible')
+call s:ensure('tpope/vim-commentary')
+call s:ensure('tpope/vim-fugitive')
+call s:ensure('ayu-theme/ayu-vim')
 call s:ensure('junegunn/fzf')
 call s:ensure('junegunn/fzf.vim')
 
@@ -21,6 +25,4 @@ if v:version >= 900
     call s:ensure('yegappan/lsp')
 endif
 
-call s:ensure('tpope/vim-commentary')
-call s:ensure('tpope/vim-fugitive')
-call s:ensure('ayu-theme/ayu-vim')
+

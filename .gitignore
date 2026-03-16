@@ -9,14 +9,9 @@ Thumbs.db
 .tmux/.tmux/plugins/*/
 !.tmux/.tmux/plugins/tpm
 
-.vim/spell/
-.vim/undo/
-.vim/backup/
-.vim/swap/
-.vim/view/
-.vim/plugged/
-.vim/autoload/
-.vim/undodir/
+vim/.vim/plugged/
+vim/.vim/autoload/
+vim/.vim/undodir/
 
 .config/nvim/
 !.config/nvim/.git

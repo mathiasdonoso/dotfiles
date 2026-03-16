@@ -4,39 +4,39 @@ autocmd User LspSetup call LspOptionsSet(lspOpts)
 let lspServers = []
 
 if executable('rust-analyzer')
-  call add(lspServers, #{
-      \   name: 'rust-analyzer',
-      \   filetype: ['rust'],
-      \   path: 'rust-analyzer',
-      \   args: []
-      \ })
+    call add(lspServers, #{
+                \   name: 'rust-analyzer',
+                \   filetype: ['rust'],
+                \   path: 'rust-analyzer',
+                \   args: []
+                \ })
 endif
 
 if executable('gopls')
-  call add(lspServers, #{
-      \   name: 'gopls',
-      \   filetype: ['go'],
-      \   path: 'gopls',
-      \   args: []
-      \ })
+    call add(lspServers, #{
+                \   name: 'gopls',
+                \   filetype: ['go'],
+                \   path: 'gopls',
+                \   args: []
+                \ })
 endif
 
 if executable('clangd')
-  call add(lspServers, #{
-      \   name: 'clangd',
-      \   filetype: ['c', 'cpp'],
-      \   path: 'clangd',
-      \   args: []
-      \ })
+    call add(lspServers, #{
+                \   name: 'clangd',
+                \   filetype: ['c', 'cpp'],
+                \   path: 'clangd',
+                \   args: []
+                \ })
 endif
 
 if executable('typescript-language-server')
-  call add(lspServers, #{
-      \   name: 'tsserver',
-      \   filetype: ['javascript', 'typescript'],
-      \   path: 'typescript-language-server',
-      \   args: ['--stdio']
-      \ })
+    call add(lspServers, #{
+                \   name: 'tsserver',
+                \   filetype: ['javascript', 'typescript'],
+                \   path: 'typescript-language-server',
+                \   args: ['--stdio']
+                \ })
 endif
 
 autocmd User LspSetup call LspAddServer(lspServers)

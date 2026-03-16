@@ -7,3 +7,5 @@ source ~/.vim/fzf.vim
 if v:version >= 900
     source ~/.vim/lsp.vim
 endif
+
+source ~/.vim/format.vim

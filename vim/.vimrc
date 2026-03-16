@@ -7,8 +7,3 @@ source ~/.vim/fzf.vim
 if v:version >= 900
     source ~/.vim/lsp.vim
 endif
-
-if executable('go')
-    let $GOPATH = $HOME . "/go"
-    let $PATH = $HOME . "/go/bin:" . $PATH
-endif

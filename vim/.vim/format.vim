@@ -11,3 +11,10 @@ if executable('rustfmt')
     autocmd BufWritePre *.rs silent! %!rustfmt
   augroup END
 endif
+
+if executable('ruff')
+  augroup ruffmt
+    autocmd!
+    autocmd BufWritePre *.py silent! %!ruff format -
+  augroup END
+endif

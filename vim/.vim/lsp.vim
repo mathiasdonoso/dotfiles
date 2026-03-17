@@ -39,6 +39,15 @@ if executable('typescript-language-server')
                 \ })
 endif
 
+if executable('pyright-langserver')
+    call add(lspServers, #{
+                \   name: 'pyright',
+                \   filetype: ['python'],
+                \   path: 'pyright-langserver',
+                \   args: ['--stdio']
+                \ })
+endif
+
 autocmd User LspSetup call LspAddServer(lspServers)
 
 nnoremap gd :LspGotoDefinition<CR>

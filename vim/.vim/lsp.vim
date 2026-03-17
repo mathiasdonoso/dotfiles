@@ -26,7 +26,7 @@ if executable('clangd')
                 \   name: 'clangd',
                 \   filetype: ['c', 'cpp'],
                 \   path: 'clangd',
-                \   args: []
+                \   args: ['--background-index', '--clang-tidy']
                 \ })
 endif
 

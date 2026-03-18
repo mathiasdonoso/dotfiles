@@ -41,11 +41,12 @@ endif
 
 let s:venv_bin = getcwd() .. '/.venv/bin/'
 
-if executable('pyright-langserver')
+if executable(s:venv_bin .. 'basedpyright-langserver') || executable('basedpyright-langserver')
+    " uv add --dev basedpyright
     call add(lspServers, #{
-                \   name: 'pyright',
+                \   name: 'basedpyright',
                 \   filetype: ['python'],
-                \   path: executable(s:venv_bin . 'pyright-langserver') ? s:venv_bin . 'pyright-langserver' : 'pyright-langserver',
+                \   path: executable(s:venv_bin . 'basedpyright-langserver') ? s:venv_bin . 'basedpyright-langserver' : 'basedpyright-langserver',
                 \   args: ['--stdio'],
                 \   workspaceConfig: #{
                 \     python: #{
@@ -60,7 +61,7 @@ if executable('pyright-langserver')
                 \ })
 endif
 
-if executable('ruff')
+if executable(s:venv_bin .. 'ruff') || executable('ruff')
     call add(lspServers, #{
                 \   name: 'ruff',
                 \   filetype: ['python'],

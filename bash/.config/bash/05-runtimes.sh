@@ -15,3 +15,6 @@ command -v uv &>/dev/null && eval "$(uv generate-shell-completion bash)"
 
 # Bun
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# Jujutsu
+command -v jj >/dev/null 2>&1 && source <(jj util completion bash)

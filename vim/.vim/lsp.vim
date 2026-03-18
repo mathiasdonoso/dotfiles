@@ -45,7 +45,7 @@ if executable('pyright-langserver')
     call add(lspServers, #{
                 \   name: 'pyright',
                 \   filetype: ['python'],
-                \   path: 'pyright-langserver',
+                \   path: executable(s:venv_bin . 'pyright-langserver') ? s:venv_bin . 'pyright-langserver' : 'pyright-langserver',
                 \   args: ['--stdio'],
                 \   workspaceConfig: #{
                 \     python: #{
@@ -65,7 +65,7 @@ if executable('ruff')
                 \   name: 'ruff',
                 \   filetype: ['python'],
                 \   path: executable(s:venv_bin .. 'ruff') ? s:venv_bin .. 'ruff' : 'ruff',
-                \   args: ['server']
+                \   args: ['server'],
                 \ })
 endif
 
@@ -77,6 +77,7 @@ nnoremap K  :LspHover<CR>
 nnoremap gl :LspDiag current<CR>
 nnoremap <leader>nd :LspDiag next \| LspDiag current<CR>
 nnoremap <leader>pd :LspDiag prev \| LspDiag current<CR>
+nnoremap <leader>ca :LspCodeAction<CR>
 inoremap <silent> <C-Space> <C-x><C-o>
 
 autocmd FileType php setlocal omnifunc=lsp#complete

@@ -39,6 +39,8 @@ if executable('typescript-language-server')
                 \ })
 endif
 
+let s:venv_bin = getcwd() .. '/.venv/bin/'
+
 if executable('pyright-langserver')
     call add(lspServers, #{
                 \   name: 'pyright',
@@ -47,7 +49,7 @@ if executable('pyright-langserver')
                 \   args: ['--stdio'],
                 \   workspaceConfig: #{
                 \     python: #{
-                \       pythonPath: executable(getcwd() . '/.venv/bin/python') ? getcwd() . '/.venv/bin/python' : 'python3',
+                \       pythonPath: executable(s:venv_bin .. 'python') ? s:venv_bin .. 'python' : 'python3',
                 \       analysis: #{
                 \         autoSearchPaths: v:true,
                 \         useLibraryCodeForTypes: v:true,
@@ -55,6 +57,15 @@ if executable('pyright-langserver')
                 \       }
                 \     }
                 \   }
+                \ })
+endif
+
+if executable('ruff')
+    call add(lspServers, #{
+                \   name: 'ruff',
+                \   filetype: ['python'],
+                \   path: executable(s:venv_bin .. 'ruff') ? s:venv_bin .. 'ruff' : 'ruff',
+                \   args: ['server']
                 \ })
 endif
 

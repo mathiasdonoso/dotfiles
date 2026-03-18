@@ -44,7 +44,17 @@ if executable('pyright-langserver')
                 \   name: 'pyright',
                 \   filetype: ['python'],
                 \   path: 'pyright-langserver',
-                \   args: ['--stdio']
+                \   args: ['--stdio'],
+                \   workspaceConfig: #{
+                \     python: #{
+                \       pythonPath: executable(getcwd() . '/.venv/bin/python') ? getcwd() . '/.venv/bin/python' : 'python3',
+                \       analysis: #{
+                \         autoSearchPaths: v:true,
+                \         useLibraryCodeForTypes: v:true,
+                \         diagnosticMode: 'workspace'
+                \       }
+                \     }
+                \   }
                 \ })
 endif
 

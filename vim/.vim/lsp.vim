@@ -87,3 +87,5 @@ autocmd User LspSetup call LspOptionsSet(#{
             \   popupBorder: v:true,
             \   popupBorderChars: ['═', '║', '═', '║', '╔', '╗', '╝', '╚'],
             \ })
+
+highlight LspSigActiveParameter ctermfg=Yellow guifg=Yellow gui=bold

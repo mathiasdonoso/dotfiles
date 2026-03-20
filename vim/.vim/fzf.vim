@@ -1,6 +1,6 @@
 if executable('fzf')
     if executable('fd')
-        let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow'
+        let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude ".cache" --exclude "*.min.js" --exclude "*.min.css"'
     endif
 
     nnoremap <leader>ff :Files<CR>

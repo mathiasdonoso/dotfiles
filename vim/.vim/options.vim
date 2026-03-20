@@ -1,36 +1,38 @@
 filetype plugin indent on
 syntax on
+set encoding=utf-8
+set noswapfile
+set mouse=a
+set clipboard=unnamedplus
 
 set number
 set relativenumber
-set mouse=a
+set cursorline
+set colorcolumn=80
+set signcolumn=yes
+set scrolloff=10
+set splitright
+set laststatus=2
 set noshowmode
+set wildmenu
+set showmatch
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set ignorecase
-set incsearch
-set smartcase
-set signcolumn=yes
-set updatetime=250
-set timeoutlen=300
-set splitright
-set cursorline
-set scrolloff=10
-set noswapfile
-set hlsearch
-set wildmenu
-set nowrap
-set colorcolumn=80
-set showmatch
-set laststatus=2
-set encoding=utf-8
-set breakindent
 set autoindent
 set smartindent
+set breakindent
 
-if has('clipboard')
-    set clipboard=unnamedplus
-endif
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
 
+set nowrap
+set list
+set listchars=tab:→\ ,space:·
+
+set updatetime=250
+set timeoutlen=300

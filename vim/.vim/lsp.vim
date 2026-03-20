@@ -33,7 +33,7 @@ endif
 if executable('typescript-language-server')
     call add(lspServers, #{
                 \   name: 'tsserver',
-                \   filetype: ['javascript', 'typescript'],
+                \   filetype: ['javascript', 'typescript', 'typescriptreact'],
                 \   path: 'typescript-language-server',
                 \   args: ['--stdio']
                 \ })

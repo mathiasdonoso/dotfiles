@@ -11,3 +11,4 @@ if executable('fzf')
     endif
 endif
 
+command! W w

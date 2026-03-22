@@ -4,7 +4,7 @@ if has('termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
     packloadall
-    let ayucolor="mirage"
+    let ayucolor="dark"
     colorscheme ayu
 
     " Transparent background

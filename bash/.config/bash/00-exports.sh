@@ -5,7 +5,7 @@ export GOPATH="$HOME/go"
 export BUN_INSTALL="$HOME/.bun"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
-[[ -x "$(command -v bat)" && -d "$(bat --config-dir)/themes/ayu-bat" ]] && export BAT_THEME="ayu-dark" || export BAT_THEME="base16"
+[[ -x "$(command -v bat)" && -d "$(bat --config-dir)/themes/ayu-bat" ]] && export BAT_THEME="ayu-mirage" || export BAT_THEME="base16"
 
 # Prepend to PATH only if not already present
 path_prepend() { [[ ":$PATH:" != *":$1:"* ]] && export PATH="$1:$PATH"; }

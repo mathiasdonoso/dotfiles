@@ -6,6 +6,8 @@ set noswapfile
 set mouse=a
 set clipboard=unnamedplus
 
+set path+=**
+
 set number
 set relativenumber
 set cursorline

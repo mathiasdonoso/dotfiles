@@ -36,3 +36,9 @@ set listchars=tab:→\ ,space:·
 
 set updatetime=250
 set timeoutlen=300
+
+if !isdirectory($HOME .. '/.vim/undodir')
+    call mkdir($HOME .. '/.vim/undodir', 'p')
+endif
+set undofile
+set undodir=~/.vim/undodir

@@ -1,5 +1,7 @@
 export EDITOR=vim
 export VISUAL=vim
+export THEME=dark
+export BROWSER=librewolf
 
 export GOPATH="$HOME/go"
 export BUN_INSTALL="$HOME/.bun"

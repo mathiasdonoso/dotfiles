@@ -27,4 +27,4 @@ nnoremap <Up>    <nop>
 nnoremap <Down>  <nop>
 
 autocmd FileType vim nnoremap <buffer> K :help <C-r><C-w><CR>
-autocmd FileType c nnoremap <buffer> <leader>k :Man 3 <C-r><C-w><CR>
+autocmd FileType c,cpp,cc,cxx nnoremap <buffer> <leader>k :Man 3 <C-r><C-w><CR>

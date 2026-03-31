@@ -27,14 +27,5 @@ nnoremap <Up>    <nop>
 nnoremap <Down>  <nop>
 
 autocmd FileType vim nnoremap <buffer> K :help <C-r><C-w><CR>
-autocmd FileType c,cpp,cc,cxx nnoremap <buffer> K :call <SID>CManOrLsp()<CR>
-
-function! s:CManOrLsp()
-    let l:word = expand('<cword>')
-    let l:manout = system('man -w 3 ' . l:word . ' 2>/dev/null')
-    if v:shell_error == 0
-        execute 'Man 3 ' . l:word
-    else
-        LspHover
-    endif
-endfunction
+autocmd FileType c,cpp,cc,cxx nnoremap <buffer> K :LspHover<CR>
+autocmd FileType c,cpp,cc,cxx nnoremap <buffer> <leader>k :Man 3 <C-r><C-w><CR>
